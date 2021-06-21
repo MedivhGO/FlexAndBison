@@ -1,6 +1,7 @@
 %{
     #include "fbl-5.tab.h"
 %}
+
 %%
 "+"         { return ADD; }
 "-"         { return SUB; }
@@ -11,3 +12,5 @@
 \n          { return EOL; }
 [\t]        { }
 .           { printf("Mystery character %c\n", *yytext); }
+
+%%
